@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>到着</title>
+</head>
+<body>
+  <button onclick="sendArrived()">着きました</button>
+
+  <script>
+    function sendArrived() {
+      fetch('https://api.line.me/v2/bot/message/push', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer 7TJI4bNCiCRqQvAHaOKERbCh0LyolBRLSc357QdPNXnsw5ibdKCr9E+XuqhAMJQEJv3bimMbGbU3TOB0y5FpWeEZrV3GhE+RJkIZGjXXEuQF6+ifu20pvJkJh5wzfR1z3T8EfUw8cDSkj+/IibNgxgdB04t89/1O/w1cDnyilFU='
+        },
+        body: JSON.stringify({
+          "to": "neptune0103",
+          "messages":[
+            {"type":"text", "text":"ARRIVED"}
+          ]
+        })
+      }).then(response => {
+        if(response.ok) alert('送信しました’);
+        else alert('送信失敗しました');
+      });
+    }
+  </script>
+</body>
+</html>
