@@ -2,6 +2,30 @@
 <html>
 <head>
   <title>到着</title>
+    <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      font-size: 48px; /* 字体特别大 */
+      padding: 40px 80px; /* 按钮更大，更容易点击 */
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
   <button onclick="sendArrived()">着きました</button>
